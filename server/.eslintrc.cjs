@@ -8,8 +8,8 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.js'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    'ecmaVersion': 2018,
-    'sourceType': 'module',
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
   plugins: ['@stylistic'],
   rules: {
@@ -18,8 +18,9 @@ module.exports = {
     '@stylistic/eol-last': ['error', 'always'],
     '@stylistic/indent': ['error', 2],
     '@stylistic/linebreak-style': ['error', 'unix'],
-    '@stylistic/max-len': ['error', { 'code': 120 }],
+    '@stylistic/max-len': ['error', { code: 120 }],
     '@stylistic/quotes': ['error', 'single'],
+    '@stylistic/quote-props': ['error', 'consistent-as-needed'],
     '@stylistic/semi': 'error',
   },
 };

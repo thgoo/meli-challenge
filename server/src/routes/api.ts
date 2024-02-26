@@ -6,8 +6,8 @@ const router = express.Router();
 router.get('/items', (req, res) => {
   res.json({
     author: {
-      name: 'John',
-      lastname: 'Doe',
+      name: process.env.AUTHOR_FIRSTNAME || 'John',
+      lastname: process.env.AUTHOR_LASTNAME || 'Doe',
     },
     categories: ['Sandalias y Ojotas', 'Calzado', 'Ropa y Accesorios'],
     items: [

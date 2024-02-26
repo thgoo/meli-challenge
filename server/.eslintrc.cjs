@@ -1,15 +1,25 @@
 module.exports = {
-  root: false,
+  root: true,
   env: { es2020: true, node: true },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.js'],
   parser: '@typescript-eslint/parser',
-  plugins: [],
+  parserOptions: {
+    'ecmaVersion': 2018,
+    'sourceType': 'module',
+  },
+  plugins: ['@stylistic'],
   rules: {
-    'prettier/prettier': 'error',
+    '@stylistic/arrow-parens': ['error', 'as-needed'],
+    '@stylistic/comma-dangle': ['error', 'always-multiline'],
+    '@stylistic/eol-last': ['error', 'always'],
+    '@stylistic/indent': ['error', 2],
+    '@stylistic/linebreak-style': ['error', 'unix'],
+    '@stylistic/max-len': ['error', { 'code': 120 }],
+    '@stylistic/quotes': ['error', 'single'],
+    '@stylistic/semi': 'error',
   },
 };

@@ -12,18 +12,18 @@ router.get('/items', (req, res) => {
     categories: ['Sandalias y Ojotas', 'Calzado', 'Ropa y Accesorios'],
     items: [
       {
-        'id': 'MLA123',
-        'title': 'Ojotas Havaianas Color Brasileras Originales. Local En Caba',
-        'price': {
-          'currency': 'ARS',
-          'amount': 797905,
-          'decimals': 2,
+        id: 'MLA123',
+        title: 'Ojotas Havaianas Color Brasileras Originales. Local En Caba',
+        price: {
+          currency: 'ARS',
+          amount: 797905,
+          decimals: 2,
         },
         picture: 'https://via.placeholder.com/150',
-        'condition': 'new',
-        'free_shipping': false
+        condition: 'new',
+        free_shipping: false,
       },
-    ]
+    ],
   });
 });
 
@@ -32,20 +32,22 @@ router.get('/items/:id', (req, res) => {
   res.json({
     author: {
       name: '',
-      lastname: ''
+      lastname: '',
     },
     item: {
       id: '',
       title: '',
       price: {
-        currency: '', amount: 0, decimals: 0,
+        currency: '',
+        amount: 0,
+        decimals: 0,
       },
       picture: '',
       condition: '',
       free_shipping: false,
       sold_quantity: 0,
-      description: ''
-    }
+      description: '',
+    },
   });
 });
 

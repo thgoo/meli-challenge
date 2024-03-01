@@ -1,0 +1,54 @@
+@import "@/assets/style/variables.scss";
+
+.product-list-item {
+  display: flex;
+  column-gap: 16px;
+
+  &__image {
+    width: 180px;
+    height: 180px;
+    border-radius: $border-radius-base;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: $border-radius-base;
+    }
+  }
+
+  &__product-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px; // the result will be ~32px because of the line-height
+    flex: 1;
+    max-width: $columns-4;
+    color: #333;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+
+    small {
+      position: relative;
+      top: -4px;
+      margin-right: 12px;
+      font-size: 12px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+  }
+
+  &__condition {
+    flex: 0 0 $columns-2;
+    margin: 32px 0 0 auto;
+    font-size: 12px;
+    color: #666;
+  }
+}

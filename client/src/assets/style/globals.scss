@@ -1,0 +1,17 @@
+@import './preflight.scss';
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  overflow-y: scroll;
+  // overflow-x: hidden; // trick to prevent page from shifting when scrollbar appears
+  // margin-right: calc(-1 * (100vw - 100%)); // trick to prevent page from shifting when scrollbar appears
+}
+
+body {
+  background-color: #eeeeee;
+}

@@ -22,5 +22,6 @@ module.exports = {
     '@stylistic/quotes': ['error', 'single'],
     '@stylistic/quote-props': ['error', 'consistent-as-needed'],
     '@stylistic/semi': 'error',
+    '@typescript-eslint/no-explicit-any': [0], // we will use any for now
   },
 };

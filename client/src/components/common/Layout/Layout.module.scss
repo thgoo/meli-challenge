@@ -1,0 +1,23 @@
+@import '@/assets/style/variables.scss';
+
+.main-layout {
+  &__breadcrumb-wrapper {
+    width: $columns-10;
+    max-width: $max-width;
+    margin: 16px auto;
+    line-height: 1;
+  }
+
+  &__content {
+    width: $columns-10;
+    max-width: $max-width;
+    margin: 0 auto 32px;
+    padding: 16px;
+    border-radius: $border-radius-base;
+    background-color: #fff;
+
+    &:first-of-type {
+      margin-top: 32px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '@/assets/style/variables.scss';
+
+.product-list {
+  &__product-wrapper {
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #eeeeee;
+    }
+  }
+}

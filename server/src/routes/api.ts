@@ -1,54 +1,31 @@
 import express from 'express';
+import ItemService from '../services/item';
 
 const router = express.Router();
 
 // search items
-router.get('/items', (req, res) => {
-  res.json({
-    author: {
-      name: process.env.AUTHOR_FIRSTNAME || 'John',
-      lastname: process.env.AUTHOR_LASTNAME || 'Doe',
-    },
-    categories: ['Sandalias y Ojotas', 'Calzado', 'Ropa y Accesorios'],
-    items: [
-      {
-        id: 'MLA123',
-        title: 'Ojotas Havaianas Color Brasileras Originales. Local En Caba',
-        price: {
-          currency: 'ARS',
-          amount: 797905,
-          decimals: 2,
-        },
-        picture: 'https://via.placeholder.com/150',
-        condition: 'new',
-        free_shipping: false,
-      },
-    ],
-  });
+router.get('/items', async (req, res) => {
+  try {
+    const searchTerm = req.query.q || '';
+    const itemService = new ItemService();
+    const items = await itemService.searchItems(searchTerm as string);
+
+    return res.json(items);
+  } catch {
+    return res.status(500).send();
+  }
 });
 
 // get item by id
-router.get('/items/:id', (req, res) => {
-  res.json({
-    author: {
-      name: '',
-      lastname: '',
-    },
-    item: {
-      id: '',
-      title: '',
-      price: {
-        currency: '',
-        amount: 0,
-        decimals: 0,
-      },
-      picture: '',
-      condition: '',
-      free_shipping: false,
-      sold_quantity: 0,
-      description: '',
-    },
-  });
+router.get('/items/:id', async (req, res) => {
+  try {
+    const itemService = new ItemService();
+    const items = await itemService.getItemById(req.params.id as string);
+
+    return res.json(items);
+  } catch {
+    return res.status(500).send();
+  }
 });
 
 export default router;

@@ -53,4 +53,16 @@ describe('SearchBar', () => {
 
     expect(mockRouterPush).not.toHaveBeenCalled();
   });
+
+  it('does not navigate to the search results page if the search query is only whitespace', () => {
+    render(<SearchBar />);
+
+    const searchInput = screen.getByPlaceholderText('Nunca dejes de buscar');
+    const searchButton = screen.getByAltText('buscar');
+
+    fireEvent.change(searchInput, { target: { value: '   ' } }); // input is a string of whitespace
+    fireEvent.click(searchButton);
+
+    expect(mockRouterPush).not.toHaveBeenCalled();
+  });
 });

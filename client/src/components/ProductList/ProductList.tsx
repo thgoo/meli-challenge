@@ -16,6 +16,7 @@ const CLASSES = {
 export default function ProductList({ items }: Props) {
   return (
     <div className={CLASSES.MAIN}>
+      {items.length === 0 && <p>No se encontraron resultados</p>}
       {items.map(product => (
         <div className={CLASSES.PRODUCT_WRAPPER} key={product.id}>
           <Link href={`/items/${product.id}`}>

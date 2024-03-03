@@ -15,9 +15,13 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async (context: any) => {
-  const productService = new ProductService();
-  const product = await productService.getProductById(context.params.id);
-  return { props: { product } };
+  try {
+    const productService = new ProductService();
+    const product = await productService.getProductById(context.params.id);
+    return { props: { product } };
+  } catch {
+    return { notFound: true };
+  }
 };
 
 export default function ProductDetailsPage({ product }: Props) {

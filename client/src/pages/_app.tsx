@@ -8,6 +8,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Meli Challenge</title>
         <meta name="description" content="La comunidad de compra y venta online más grande de América Latina." />
+        <meta property="og:title" content="Meli Challenge" />
+        <meta property="og:description" content="La comunidad de compra y venta online más grande de América Latina." />
         <meta property="og:image" content="./mercado-libre.png?v=2" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

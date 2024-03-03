@@ -25,7 +25,7 @@ Desafio técnico desenvolvido para a empresa Mercado Livre. O projeto é compost
 
 1. Clone o repositório
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/thgoo/meli-challenge
 ```
 
 2. Instale as dependências do servidor

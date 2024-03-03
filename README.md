@@ -61,3 +61,5 @@ No diretório `client`, execute:
 pnpm run build && pnpm run start
 ```
 Ps: Antes de rodar o cliente, verifique se o `API_URL` dentro de `./client/.env` está configurado corretamente.
+
+Pronto, se tudo ocorreu bem, basta acessar a URL depois que o cliente estiver rodando.

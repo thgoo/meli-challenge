@@ -61,5 +61,6 @@ No diretório `client`, execute:
 pnpm run build && pnpm run start
 ```
 Ps: Antes de rodar o cliente, verifique se o `API_URL` dentro de `./client/.env` está configurado corretamente.
+Ps2: Caso a porta 3000 esteja em uso pelo servidor, utilize `pnpm run start -p 3001` para rodar na porta 3001 (ou qualquer outra de sua preferência).
 
 Pronto, se tudo ocorreu bem, basta acessar a URL depois que o cliente estiver rodando.

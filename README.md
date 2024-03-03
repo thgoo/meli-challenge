@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Desafio técnico desenvolvido para a empresa Mercado Livre. O projeto é composto por um servidor e um cliente. O servidor é implementado em Node.js e o cliente é um aplicativo Next.js. A decisão de usar o Next.js foi por causa do SSR. Com isso temos um melhor SEO e maior performance, além, no final do dia, ser um React.
+Desafio técnico desenvolvido para a empresa Mercado Livre. O projeto é composto por um servidor e um cliente. O servidor é implementado em Node.js e o cliente é um aplicativo Next.js. A decisão de usar o Next.js foi por causa do SSR. Com isso temos um melhor SEO, mais performance, e, no final do dia, é React.
 
 ## Ferramentas Utilizadas
 
